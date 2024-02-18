@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Utilize o tag template do Django para referenciar arquivos estáticos -->
+  <link rel="stylesheet" href="{% static 'style-login.css' %}" />
+  <title>Login</title>
+</head>
+<body class="main">
+  <div class="box">
+    <!-- A imagem do avatar -->
+    <img class="avatar" src="{% static 'img/pngwing.com.png' %}" />
+    <form method="post" action="{% url 'login' %}"> <!-- A URL de login -->
+      {% csrf_token %} <!-- Token CSRF para segurança -->
+      <!-- Container de input para o usuário -->
+      <div class="input-container">
+        <div class="icon">
+          <img src="{% static 'img/icon_user.png' %}" />
+        </div>
+        {{ form.username }} <!-- Campo de username -->
+        {% if form.username.errors %}
+          <p class="error">{{ form.username.errors.as_text }}</p>
+        {% endif %}
+      </div>
+      <!-- Container de input para a senha -->
+      <div class="input-container">
+        <div class="icon">
+          <img src="{% static 'img/icon_password.png' %}" />
+        </div>
+        {{ form.password }} <!-- Campo de senha -->
+        {% if form.password.errors %}
+          <p class="error">{{ form.password.errors.as_text }}</p>
+        {% endif %}
+      </div>
+      <button class="button" type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* styles.css */
+
+.main {
+  display: flex;
+  height: calc(100vh - 2rem);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #3b3d52;
+}
+
+/* color card */
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 18rem;
+  position: relative;
+  background-image: linear-gradient(
+    to bottom,
+    #302d40,
+    #2a273b,
+    #242135,
+    #1f1c30,
+    #19162b
+  );
+}
+
+/* icon */
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  background-color: #ffff;
+}
+
+.icon img {
+  width: 1.4rem;
+}
+
+/* input */
+.input-container {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem;
+  width: 100%;
+}
+
+.input-container input {
+  height: 3rem;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #dddbe6;
+  border: none;
+  padding: 0 0.6rem;
+}
+
+.icon input {
+  height: 2rem;
+  border: 1px solid #ccc;
+  padding: 0 0.6rem;
+}
+
+/* avatar */
+.avatar {
+  width: 8.5rem;
+}
+
+/* lower-card */
+.lower-card {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lower-card label {
+  color: #ffff;
+  font-size: 0.8rem;
+}
+
+.lower-card p {
+  color: #ffff;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* button */
+.button {
+  width: 100%;
+  background-color: #0a0818;
+  border: none;
+  color: #ffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  height: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
